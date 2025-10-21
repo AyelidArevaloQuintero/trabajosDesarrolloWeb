@@ -1,0 +1,398 @@
+/* Estilos principales para la Fanbase de Ataque a los Titanes */
+:root {
+    --titan-red: #8b0000;
+    --titan-dark: #0a0a0a;
+    --titan-gray: #1a1a1a;
+    --titan-light: #2a2a2a;
+    --titan-text: #e0e0e0;
+    --titan-gold: #daa520;
+    --titan-bronze: #cd7f32;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--titan-dark);
+    color: var(--titan-text);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.titan-navbar {
+    background: linear-gradient(135deg, var(--titan-gray) 0%, var(--titan-dark) 100%) !important;
+    border-bottom: 3px solid var(--titan-red);
+    box-shadow: 0 2px 20px rgba(139, 0, 0, 0.3);
+}
+
+.titan-logo {
+    font-weight: bold;
+    color: var(--titan-gold) !important;
+    text-shadow: 0 0 10px rgba(218, 165, 32, 0.5);
+    font-size: 1.3rem;
+}
+
+.navbar-nav .nav-link {
+    color: var(--titan-text) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--titan-red) !important;
+    background: rgba(139, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Header */
+.titan-header {
+    background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.9)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><rect width="120" height="120" fill="%231a1a1a"/><path d="M60,25 L70,50 L95,55 L75,75 L80,100 L60,85 L40,100 L45,75 L25,55 L50,50 Z" fill="%238b0000" opacity="0.3"/></svg>');
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.titan-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(139, 0, 0, 0.1) 0%, transparent 50%);
+}
+
+.titan-title {
+    color: var(--titan-gold);
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.titan-subtitle {
+    color: #b0b0b0;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Botones */
+.btn-titan {
+    background: linear-gradient(135deg, var(--titan-gold), var(--titan-bronze));
+    border: none;
+    color: var(--titan-dark);
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
+}
+
+.btn-titan:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(218, 165, 32, 0.4);
+    color: var(--titan-dark);
+}
+
+.btn-titan-action {
+    background: linear-gradient(135deg, var(--titan-red), #a00);
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-titan-action:hover {
+    background: linear-gradient(135deg, #a00, var(--titan-red));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+    color: white;
+}
+
+.btn-titan-submit {
+    background: linear-gradient(135deg, #006400, #008000);
+    border: none;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-titan-submit:hover {
+    background: linear-gradient(135deg, #008000, #006400);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 100, 0, 0.4);
+}
+
+/* Cards */
+.titan-card {
+    background: linear-gradient(135deg, var(--titan-gray), var(--titan-light));
+    border: 1px solid #333;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    color: var(--titan-text);
+}
+
+.titan-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(139, 0, 0, 0.25);
+    border-color: var(--titan-red);
+}
+
+.titan-card-title {
+    color: var(--titan-gold);
+    font-weight: bold;
+    border-bottom: 2px solid var(--titan-red);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Secciones */
+.titan-section {
+    background-color: var(--titan-dark);
+    position: relative;
+}
+
+.titan-join {
+    background: linear-gradient(135deg, var(--titan-gray) 0%, var(--titan-dark) 100%);
+}
+
+.section-title {
+    color: var(--titan-gold);
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--titan-red), transparent);
+}
+
+/* Personajes */
+.character-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.character-name {
+    color: var(--titan-red);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.text-titan {
+    color: var(--titan-gold);
+    font-style: italic;
+}
+
+/* Formularios */
+.titan-input {
+    background-color: rgba(42, 42, 42, 0.8) !important;
+    border: 1px solid #444 !important;
+    color: var(--titan-text) !important;
+    border-radius: 6px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.titan-input:focus {
+    border-color: var(--titan-red) !important;
+    box-shadow: 0 0 0 0.2rem rgba(139, 0, 0, 0.25) !important;
+    background-color: var(--titan-light) !important;
+}
+
+.join-title {
+    color: var(--titan-gold);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.titan-hr {
+    border-color: #444;
+    margin: 2rem 0;
+}
+
+.trial-account {
+    color: #b0b0b0;
+    background: rgba(139, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid var(--titan-red);
+}
+
+/* Modal */
+.modal-custom {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1050;
+    backdrop-filter: blur(5px);
+}
+
+.modal-custom.show {
+    display: flex;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content-custom {
+    background: linear-gradient(135deg, var(--titan-gray), var(--titan-light));
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(139, 0, 0, 0.3);
+    border: 1px solid var(--titan-red);
+    color: var(--titan-text);
+    position: relative;
+}
+
+.modal-title-custom {
+    color: var(--titan-gold);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--titan-red);
+    padding-bottom: 10px;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: var(--titan-text);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: var(--titan-red);
+}
+
+.btn-modal-ok {
+    background: linear-gradient(135deg, var(--titan-red), #a00);
+    border: none;
+    font-weight: bold;
+}
+
+.btn-modal-cancel {
+    background: #444;
+    border: none;
+    color: var(--titan-text);
+}
+
+/* Alertas */
+.alert-dynamic {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+}
+
+/* Footer */
+.titan-footer {
+    background: linear-gradient(135deg, var(--titan-gray) 0%, var(--titan-dark) 100%);
+    border-top: 3px solid var(--titan-red);
+    color: var(--titan-text);
+}
+
+/* Dashboard específico */
+.dashboard-body {
+    background: linear-gradient(135deg, var(--titan-dark) 0%, #1a0a0a 100%);
+}
+
+.dashboard-main {
+    min-height: calc(100vh - 200px);
+}
+
+.welcome-card {
+    background: linear-gradient(135deg, var(--titan-gray), #2a1a1a);
+    border: 2px solid var(--titan-gold);
+}
+
+.welcome-card .card-title {
+    color: var(--titan-gold);
+    font-size: 1.8rem;
+}
+
+.status-badge {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.status-active {
+    background: linear-gradient(135deg, var(--titan-red), #a00);
+    color: white;
+}
+
+.status-ready {
+    background: linear-gradient(135deg, #006400, #008000);
+    color: white;
+}
+
+.expedition-status {
+    margin-bottom: 1rem;
+}
+
+.expedition-status h6 {
+    color: var(--titan-gold);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .display-6 {
+        font-size: 1.8rem;
+    }
+    
+    .titan-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .btn-titan {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .character-icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-6 {
+        font-size: 1.5rem;
+    }
+    
+    .titan-logo {
+        font-size: 1.1rem;
+    }
+    
+    .modal-content-custom {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}

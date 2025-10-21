@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Legión de Reconocimiento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="dashboard-body">
+    <nav class="navbar navbar-expand-lg navbar-dark titan-navbar">
+        <div class="container">
+            <a class="navbar-brand titan-logo" href="index.html">⚔️ Cuartel General</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">👤 Perfil de Soldado</a></li>
+                    <li class="nav-item"><a class="nav-link" id="logoutBtn" href="#">🚪 Abandonar Cuartel</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-5 dashboard-main">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card titan-card welcome-card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">🎉 ¡Bienvenido a la Legión, Soldado!</h3>
+                            <p class="card-text">Has sido aceptado en las filas de la Legión de Reconocimiento. Tu coraje nos acerca a la verdad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <div class="card h-100 titan-card">
+                        <div class="card-body">
+                            <h5 class="card-title">📊 Tu Misión</h5>
+                            <p class="card-text">Como nuevo recluta, tu entrenamiento comienza ahora. Prepárate para expediciones más allá del Muro María.</p>
+                            <ul class="list-unstyled mt-3">
+                                <li>✅ Entrenamiento con equipo de maniobra</li>
+                                <li>✅ Estudio de comportamiento titán</li>
+                                <li>✅ Tácticas de reconocimiento</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card h-100 titan-card">
+                        <div class="card-body">
+                            <h5 class="card-title">🗺️ Panel de Expediciones</h5>
+                            <p class="card-text">Monitorea las expediciones activas y el estado de la Legión.</p>
+                            
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="expedition-status">
+                                        <h6>Expedición Actual:</h6>
+                                        <span class="status-badge status-active">Más allá de Muro María</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="expedition-status">
+                                        <h6>Estado Legión:</h6>
+                                        <span class="status-badge status-ready">Preparada</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <button class="btn btn-warning me-2 btn-titan-action">📋 Ver Reportes</button>
+                                <button class="btn btn-info me-2 btn-titan-action">🗺️ Mapa Estratégico</button>
+                                <button class="btn btn-danger" id="dangerAction">⚠️ Misión Peligrosa</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="customModal" class="modal-custom" aria-hidden="true">
+        <div class="modal-content-custom">
+            <button class="modal-close" id="modalClose">×</button>
+            <h5 id="modalTitle" class="modal-title-custom">⚠️ Misión Peligrosa</h5>
+            <p id="modalBody">Esta operación tiene alto riesgo de bajas. ¿Estás preparado para ofrecer tu corazón por la humanidad?</p>
+            <div class="text-end">
+                <button class="btn btn-secondary btn-modal-cancel" id="modalCancel">Retroceder</button>
+                <button class="btn btn-danger btn-modal-ok" id="modalOk">¡Aceptar Misión!</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 text-center titan-footer">
+        <div class="container">
+            <p class="small mb-0">Legión de Reconocimiento - Sistema Interno 🛡️</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
