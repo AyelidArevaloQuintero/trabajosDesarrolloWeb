@@ -16,13 +16,13 @@ class TitanFanbase {
             loginForm.addEventListener('submit', (e) => this.handleLogin(e));
         }
 
-        // Modal functionality
+        // Funcionalidades del Modal
         const openExampleBtn = document.getElementById('openExampleBtn');
         if (openExampleBtn) {
             openExampleBtn.addEventListener('click', () => this.showExpeditionModal());
         }
 
-        // Modal controls
+        // Control de los modales
         const modalClose = document.getElementById('modalClose');
         const modalOk = document.getElementById('modalOk');
         const modalCancel = document.getElementById('modalCancel');
@@ -31,7 +31,7 @@ class TitanFanbase {
         if (modalOk) modalOk.addEventListener('click', () => this.handleModalConfirm());
         if (modalCancel) modalCancel.addEventListener('click', () => this.hideModal());
 
-        // Dashboard functionality
+        // Funcionalidades del Dashboard 
         const logoutBtn = document.getElementById('logoutBtn');
         const dangerAction = document.getElementById('dangerAction');
 
@@ -51,7 +51,7 @@ class TitanFanbase {
             }
         });
 
-        // Navegación suave
+        // Navegación tranqui
         this.setupSmoothScrolling();
     }
 
